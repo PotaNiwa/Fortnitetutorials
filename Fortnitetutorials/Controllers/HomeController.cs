@@ -13,12 +13,19 @@ namespace Fortnitetutorials.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Guides()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
+
+        public ActionResult FAQ()
+        {
+            ViewBag.Message = "ACTUAL FUCKING TRASH FAQ";
+            return View();
+        }
+
 
         public ActionResult Contact()
         {
@@ -26,5 +33,6 @@ namespace Fortnitetutorials.Controllers
 
             return View();
         }
+        
     }
 }
