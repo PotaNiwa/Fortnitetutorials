@@ -155,7 +155,7 @@ namespace Fortnitetutorials.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await UserManager.AddToRoleAsync(user.Id, "Customer");
+                    await UserManager.AddToRoleAsync(user.Id, "Player");
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771

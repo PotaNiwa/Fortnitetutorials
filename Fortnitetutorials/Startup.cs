@@ -30,10 +30,10 @@ namespace Fortnitetutorials
 
         private void CreateRoles()
         {
-            if (!roleManager.RoleExists("Customer"))
+            if (!roleManager.RoleExists("Player"))
             {
                 var role = new IdentityRole();
-                role.Name = "Customer";
+                role.Name = "Player";
                 roleManager.Create(role);
             }
 
