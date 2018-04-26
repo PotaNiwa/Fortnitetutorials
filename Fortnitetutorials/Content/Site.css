@@ -1,17 +1,4 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
-
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
+﻿
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -48,7 +35,7 @@ img {
 }
 
 .parallax {
-    background-image: url(~/Content/img/header1.jpg);
+    background-image: url("../Content/img/header1.jpg");
     height: 700px;
     width: 100%;
     background-attachment: fixed;
@@ -70,6 +57,7 @@ img {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: rgba(42,42,42,0.89);
 }
 
 .behallare {
@@ -86,6 +74,7 @@ img {
     padding: 10px;
     color: white;
     text-decoration: none;
+    background-color: rgba(42,42,42,0.89);
 }
 
     .nav a:hover {
