@@ -2,10 +2,79 @@
     ViewBag.Title = "FortniteTutorials";
 }
 
-<div class="behallare">
-    <img class="logo" src="img/logo.jpg" alt="imgnotfound">
-</div>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width;scale=1.0">
+    <link href="stylesheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link rel="stylesheet" href="css/flexslider.css" />
 
-<div class="parallax">
+    <title>FortniteTutorials </title>
 
-</div>
+</head>
+<body>
+    <div id="container">
+        <header></header>
+        <div class="parallax">
+            <div class="behallare">
+                <img class="logo" src="@Url.Content("~/Content/img/loga.png")" alt="imgnotfound">
+            </div>
+
+            <div class="centered">
+                <h1> Pro Guides</h1>
+                <p> </p>
+            </div>
+
+        </div>
+
+
+        <div class="grid-container">
+            <div class="one">1</div>
+            <div class="two">2</div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="ett">
+                    <h2> CONTACT US </h2>
+                    <p>fortnitetutorials@gmail.com</p><br>
+                    <p>(073) - 507 73 39</p><br>
+                    <p>Facebook/Instagram messages</p>
+                </div>
+                <div class="två">
+                    <h2> FOLLOW US </h2>
+                    <ul class="social_icons">
+                        <li>
+                            <a href="">
+                                <img class="social" src="@Url.Content("~/Content/img/facebook.png")" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="social" src="insta.png" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="social" src="twitter.png" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="fyra">
+
+                </div>
+                <div class="fem">
+                    <h2>TABS</h2>
+                    <ul class="tabs"></ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+

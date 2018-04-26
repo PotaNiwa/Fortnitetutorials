@@ -4,10 +4,7 @@
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -23,17 +20,150 @@ textarea {
     max-width: 280px;
 }
 
-.behallare {
-    background-color: #2A2A2A;
-    height: 156px;
+html {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    border-bottom: 1px solid white;
+}
+
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(42,42,42,0.89);
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+img {
+    width: 100%;
 }
 
 .parallax {
-    background-image: url("header1.jpg");
+    background-image: url(~/Content/img/header1.jpg);
     height: 700px;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.logo {
+    height: 110px;
+    width: 115px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.behallare {
+    background-color: rgba(42,42,42,0.89);
+    height: 137px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+    .nav a:hover {
+        border-bottom: 5px solid rgb(130,176,212);
+        font-weight: bold;
+    }
+
+#header {
+    height: 700px;
+}
+
+ul.social_icons, li.social {
+    margin-top: -23px;
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 25%;
+    list-style: none;
+    float: left;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+.social {
+    width: 30px;
+    height: 30px;
+    padding-top: 30px;
+    padding-left: 0px;
+}
+
+footer {
+    height: 415px;
+    width: 100%;
+    background-color: black;
+    padding-top: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 20px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.ett {
+    grid-column: 1;
+    grid-row: 1 / 2;
+    margin-left: 35px;
+}
+
+    .ett p {
+        color: #B0B0B0;
+    }
+
+.två {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.tre {
+    grid-column: 1;
+    grid-row: 2 / 2;
+    margin-left: 35px;
+}
+
+.fyra {
+    grid-column: 2;
+    grid-row: 2;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.fem {
+    grid-column: 3;
+    grid-row: 1;
 }
