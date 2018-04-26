@@ -1,51 +1,16 @@
 ﻿@model IEnumerable<Fortnitetutorials.Models.Guide>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Guides";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageFile)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageFile)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
-
-</table>
+<div class="Guides">
+    @foreach(var item in Model){
+        <a href="@Url.Action("Details","guides", new {id = item.ID })" 
+           class="Guides">
+            <img src="@Url.Content("~/Content/img/logo.jpg")" alt="finbild" 
+                 class="img-responsive"/>
+            <h2>@item.Title</h2>
+        </a>
+    }
+</div>
