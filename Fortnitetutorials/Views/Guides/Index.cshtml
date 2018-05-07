@@ -4,11 +4,6 @@
     ViewBag.Title = "Guides";
 }
 
-<div class="bakomyes">
-    <p>hejhej</p>
-    <p>tjenatjena</p>
-   
-</div>
 
     <p>
         <span class="btn btn-default"> @Html.ActionLink("Create New", "Create")</span>
@@ -23,7 +18,7 @@
             <img src="@Url.Content("~/Content/img/logo.jpg")" alt="finbild"
                  class="img-responsive" />
             <h2>@item.Title</h2>
-            <p class="desc">@item.Description</p>
+            
         </a>
     }
 </div>
