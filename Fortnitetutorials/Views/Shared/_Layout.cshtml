@@ -9,10 +9,8 @@
 
 </head>
 <body>
-    <div>
-        <div class="navbar navbar-inverse">
-            <div class="container">
-
+        <div class="container">
+            <div class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
@@ -24,7 +22,7 @@
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Guides", "Index", "Guides")</li>
-                        <li><img class="logo" src="@Url.Content("~/Content/img/loga.png")" alt="imgnotfound" /></li>
+                        <li><img src="@Url.Content("~/content/img/logo.png")" alt="missingimg"/></li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                         <li>@Html.ActionLink("Log in", "Login", "Account")</li>
                     </ul>
@@ -32,13 +30,50 @@
                 </div>
             </div>
         </div>
-    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        
-    </div>
 
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="ett">
+                <h2> CONTACT US </h2>
+                <p>fortnitetutorials@gmail.com</p><br>
+                <p>(073) - 507 73 39</p><br>
+                <p>Facebook/Instagram messages</p>
+            </div>
+            <div class="två">
+                <h2> FOLLOW US </h2>
+                <ul class="social_icons">
+                    <li>
+                        <a href="">
+                            <img class="social" src="@Url.Content("~/Content/img/facebook.png")" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="social" src="insta.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="social" src="twitter.png" alt="twitter">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="fyra">
+
+            </div>
+            <div class="fem">
+                <h2>TABS</h2>
+                <ul class="tabs"></ul>
+            </div>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
