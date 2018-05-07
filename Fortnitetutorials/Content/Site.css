@@ -45,7 +45,7 @@ img {
 }
 
 .logo {
-    height: 115px;
+    height: 110px;
     width: 115px;
     display: block;
     margin-left: auto;
@@ -175,4 +175,22 @@ footer {
 
 .bakomyes{
     height: 137px;
+}
+
+.navigation {
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 10px;
 }
