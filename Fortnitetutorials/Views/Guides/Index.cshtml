@@ -15,7 +15,7 @@
     {
         <a href="@Url.Action("Details","guides", new {id = item.ID })"
            class="Guides">
-            <img src="@Url.Content("~/Content/img/logo.jpg")" alt="finbild"
+            <img src="@Url.Content("~/Content/Img" + item.ImageFile)" alt="finbild"
                  class="img-responsive" />
             <h2>@item.Title</h2>
         </a>
