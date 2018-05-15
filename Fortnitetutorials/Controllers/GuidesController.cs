@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using Fortnitetutorials.Models;
 
@@ -48,10 +49,13 @@ namespace Fortnitetutorials.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Description,ImageFile,CategoryID")] Guide guide)
+        public ActionResult Create([Bind(Include = "ID,Title,Description,ImageFile,CategoryID")] Guide guide, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                WebImage webImage = new WebImage(file.InputStream);
+                webImage.Save("~/Content/Img" + file.FileName);
+                guide.ImageFile = file.FileName;
                 db.Guide.Add(guide);
                 db.SaveChanges();
                 return RedirectToAction("Index");
