@@ -13,13 +13,18 @@
             <div>
                 
                 <div>
-                    <ul class="navigation">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Guides", "Index", "Guides")</li>
-                        <li><img src="@Url.Content("~/content/img/logo.png")" alt="missingimg"/></li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("Log in", "Login", "Account")</li>
-                    </ul>
+					<header>
+						
+
+							<ul id="navigation">
+								<li><a href="tjena.html">@Html.ActionLink("Home", "Index", "Home")</a></li>
+								<li><a href="tjena.html">@Html.ActionLink("Guides", "Index", "Guides")</a></li>
+								<li><a href="tjena.html"><img class="logo" src="@Url.Content("~/content/img/loga.png")" alt="missingimg" /></a></li>
+								<li><a href="tjena.html">@Html.ActionLink("Contact", "Contact", "Home")</a></li>
+								<li><a href="tjena.html">@Html.ActionLink("Log in", "Login", "Account")</a></li>
+							</ul>
+						
+					</header>
                     @Html.Partial("_LoginPartial")
                 </div>
             </div>
@@ -29,45 +34,34 @@
         <hr />
 
     </div>
-    <footer>
-        <div class="footer">
-            <div class="ett">
-                <h2> CONTACT US </h2>
-                <p>fortnitetutorials@gmail.com</p><br>
-                <p>(073) - 507 73 39</p><br>
-                <p>Facebook/Instagram messages</p>
-            </div>
-            <div class="två">
-                <h2> FOLLOW US </h2>
-                <ul class="social_icons">
-                    <li>
-                        <a href="">
-                            <img class="social" src="@Url.Content("~/Content/img/facebook.png")" alt="facebook">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img class="social" src="insta.png" alt="instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img class="social" src="twitter.png" alt="twitter">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="fyra">
-
-            </div>
-            <div class="fem">
-                <h2>TABS</h2>
-                <ul class="tabs"></ul>
-            </div>
-        </div>
-    </footer>
+	<footer>
+		<div class="footer">
+			<div class="ett">
+				<h2> CONTACT US </h2>
+				<p>fortnitetutorials@gmail.com</p><br>
+				<p>(073) - 507 73 39</p><br>
+				<p>Facebook/Instagram messages</p>
+			</div>
+			<div class="två">
+				<h2> FOLLOW US </h2>
+				<ul class="social_icons">
+					<li>
+						<img class="social" src="@Url.Content("~/Content/img/facebook.png")" alt="facebook">
+					</li>
+					<li>
+						<img class="social" src="@Url.Content("~/Content/img/insta.png")" alt="instagram">	
+					</li>
+					<li>
+						<img class="social" src="@Url.Content("~/Content/img/twitter.png")" alt="twitter">
+					</li>
+				</ul>
+			</div>
+			<div class="tre">
+				<h2>TABS</h2>
+				<ul class="tabs"></ul>
+			</div>
+		</div>
+	</footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
