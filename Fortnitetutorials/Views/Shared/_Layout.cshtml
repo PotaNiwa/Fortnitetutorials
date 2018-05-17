@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - FortniteTutorials</title>
     @Styles.Render("~/Content/css")
@@ -57,10 +58,15 @@
 					</li>
 				</ul>
 			</div>
-			<div class="tre">
-				<h2>TABS</h2>
-				<ul class="tabs"></ul>
-			</div>
+            <div class="tre">
+                <h2>TABS</h2>
+                <ul id="lowkeynav">
+                    <li><a>@Html.ActionLink("Home", "Index", "Home")</a></li>
+                    <li><a>@Html.ActionLink("Guides", "Index", "Guides")</a></li>
+                    <li><a>@Html.ActionLink("Contact", "Contact", "Home")</a></li>
+                    <li><a>@Html.ActionLink("Log in", "Login", "Account")</a></li>
+                </ul>
+            </div>
 		</div>
 	</footer>
     @Scripts.Render("~/bundles/jquery")
