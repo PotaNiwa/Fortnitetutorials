@@ -115,51 +115,41 @@ footer {
 .grid-container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 10px;
+	grid-gap: 50px;
 	grid-auto-rows: minmax(100px, auto);
 	padding: 60px;
 }
 
 .one {
-	grid-column: 1;
-	height: 500px;
-	background-color: dodgerblue;
+    grid-column: 1;
+    grid-row: span 1/2;
+    height: 200px;
+    background-color: #F7D946;
 }
 
 .dos {
-	grid-column: 2;
-	height: 500px;
-	background-color: red;
+    grid-column: 2;
+    grid-row: span 1;
+    height: 500px;
+    background-color: #A8E0FB;
+    
+}
+
+.three {
+    grid-column: 1;
+    grid-row: span 2/4;
+    background-color: red;
+    height: 200px;
 }
 
 .centered {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: rgba(42,42,42,0.89);
 	color: white;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top: 10px;
-	padding-bottom: 20px;
-}
-
-.guidetitle{
-    margin: 0 auto;
-}
-
-.Guides {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 12px;
-}
-
-.Guides {
-    grid-column: span 1;
-    border: 1px solid #eeeeee;
-    background-image: url("../Content/Img" + item.ImageFile);
-    padding: 10px;
-    color: black;
-    text-decoration: none;
+	padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
