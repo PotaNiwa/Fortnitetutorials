@@ -8,6 +8,11 @@ h2 {
 	border-bottom: 1px solid white;
 }
 
+h3 {
+    font-size: 30px;
+    text-align:center;
+}
+
 .parallax {
 	background-image: url("../Content/img/header5.jpg");
 	height: 450px;
@@ -157,7 +162,8 @@ footer {
 .two {
     grid-column: 2;
     height: 300px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(0,0,0,0.8);
+    color: white;
 }
 
 .centered {
