@@ -1,5 +1,7 @@
 ﻿h1 {
-	text-align: center;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Titan One', cursive;
 }
 
 h2 {
@@ -14,6 +16,21 @@ h2 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: auto;
+}
+
+.parallax2 {
+    background-image: url("../Content/img/header1.jpg");
+    height: 600px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.whitespace {
+    background-color: rgb(42,42,42);
+    height: 20px;
 }
 
 .logo {
@@ -53,6 +70,16 @@ header {
 #navigation a:hover {
 	border-bottom: 5px solid rgb(130,176,212);
 	font-weight: bold;
+}
+
+#lowkeynav ul {
+    list-style: none;
+    display: inline-block;
+}
+
+#lowkeynav a {
+    text-decoration: none;
+    color: white;
 }
 
 ul.social_icons, li.social {
@@ -122,54 +149,48 @@ footer {
 
 .one {
     grid-column: 1;
-    grid-row: span 1/2;
-    height: 200px;
-    background-color: #F7D946;
+    height: 300px;
+    background-color: rgba(0,0,0,0.8);
+    color:white;
 }
 
-.dos {
+.two {
     grid-column: 2;
-    grid-row: span 1;
-    height: 500px;
-    background-color: #A8E0FB;
-    
-}
-
-.three {
-    grid-column: 1;
-    grid-row: span 2/4;
-    background-color: red;
-    height: 200px;
+    height: 300px;
+    background-color: rgba(255,255,255,0.8);
 }
 
 .centered {
 	position: absolute;
-	top: 60%;
+	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: rgba(42,42,42,0.89);
-	color: white;
-	padding-bottom: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
+	background-color: rgba(255,255,0,1);
+	color: black;
+	height: 80px;
+    width: 270px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .Guides {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 12px;
+    grid-gap: 100px;
 }
 
-.Guides {
+.Guide {
+    max-width: 250px;
+    grid-row: span 1/2;
     grid-column: span 1;
     border: 1px solid #eeeeee;
     padding: 10px;
-    color: black;
+    color: rgb(42,42,42);
     text-decoration: none;
-    font-family: Roboto;
+    text-align: center;
 }
 
-.Guides a:hover{
-    text-decoration: none;
-    color: black;
+.Guide a:hover{
+    text-decoration: underline;
+    color: red;
 }
