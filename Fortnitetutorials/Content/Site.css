@@ -178,3 +178,25 @@ footer {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+.Guides {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+}
+
+.Guide {
+    max-width: 250px;
+    grid-row: span 1/2;
+    grid-column: span 1;
+    border: 1px solid #eeeeee;
+    padding: 10px;
+    color: rgb(42,42,42);
+    text-decoration: none;
+    text-align: center;
+}
+
+.Guide a:hover{
+    text-decoration: underline;
+    color: red;
+}

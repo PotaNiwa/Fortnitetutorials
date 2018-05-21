@@ -7,11 +7,10 @@
 <h2>@Html.DisplayFor(model => model.Title)</h2>
 
 <div>
-    <h4>Guide</h4>  
+    <h4>@Html.DisplayFor(Model => Model.Category.Name)</h4>    
 
     <hr />
     <article class="articledesc">
-        <p> @Html.DisplayFor(model => model.Description)</p>
         <p> @Html.DisplayFor(model => model.Description)</p>
      </article>  
 
