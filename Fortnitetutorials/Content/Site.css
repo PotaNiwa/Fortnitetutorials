@@ -200,3 +200,28 @@ footer {
     text-decoration: underline;
     color: red;
 }
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+form {
+    padding: 20px;
+    margin: auto;
+    width: 300px;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, button, label {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}
