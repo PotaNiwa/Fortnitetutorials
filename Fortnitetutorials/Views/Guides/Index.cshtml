@@ -18,7 +18,7 @@
     }
 </div>
 
-@if (User.IsInRole(Admin)) {
+@if (Request.IsAuthenticated && User.IsInRole("Admin")) {
 <p>
     <span class="btn btn-default"> @Html.ActionLink("Create New", "Create")</span>
 </p>
