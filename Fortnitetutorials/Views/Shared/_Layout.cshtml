@@ -18,13 +18,20 @@
 
 
 
-						<ul id="navigation">
-							<li>@Html.ActionLink("Home", "Index", "Home")</li>
-							<li>@Html.ActionLink("Guides", "Index", "Guides")</li>
-							<li><img class="logo" src="@Url.Content("~/content/img/loga.png")" alt="missingimg" /></li>
-							<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-							<li>@Html.ActionLink("Log in", "Login", "Account")</li>
-						</ul>
+                        <ul id="navigation">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Guides", "Index", "Guides")</li>
+                            <li><img class="logo" src="@Url.Content("~/content/img/loga.png")" alt="missingimg" /></li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                            {
+                                <li>@Html.ActionLink("Account", "Index", "Manage")</li>
+                            }
+                            else
+                            {
+                                <li>@Html.ActionLink("Log in", "login", "Account")</li>
+                            }
+                        </ul>
 
 					</header>
 					@Html.Partial("_LoginPartial")
