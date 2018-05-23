@@ -6,10 +6,19 @@
 
 <div class="whitespace"></div>
 
+<div class="createbtn">
+@if (Request.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <p>
+        <span class="btn btn-default"> @Html.ActionLink("Create New", "Create")</span>
+    </p>
+}
+</div>
+
 @using (Html.BeginForm("index", "Guides", FormMethod.Get))
 {
-    <input type="text" id="search" name="search" placeholder="Search guides... "/>
-    <input type="submit" value="search"/>
+    <input type="text" id="search" name="search" placeholder="Search guides... " class="form-control" />
+    <input type="submit" value="search" class="hidden" />
 }
 
 <div class="Guides">
@@ -20,13 +29,8 @@
             <h2 class="guidetitle">@item.Title</h2>
             <img src="@Url.Content("~/Content/Img" + item.ImageFile)" alt="finbild"
                  class="img-responsive" />
-            
+
         </a>
-        }
+    }
 </div>
 
-@if (Request.IsAuthenticated && User.IsInRole("Admin")) {
-<p>
-    <span class="btn btn-default"> @Html.ActionLink("Create New", "Create")</span>
-</p>
-}

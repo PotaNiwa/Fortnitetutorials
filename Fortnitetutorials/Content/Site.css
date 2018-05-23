@@ -203,7 +203,6 @@ footer {
 
 .Guide a:hover{
     text-decoration: underline;
-    color: red;
 }
 
 body {
@@ -253,4 +252,12 @@ h1 {
     color:white;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.createbtn{
+    padding: 20px;
+}
+
+.createbtn a:hover{
+    text-decoration:none;
 }
