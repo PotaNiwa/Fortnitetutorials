@@ -13,8 +13,8 @@
 <div class="Guides">
     @foreach (var item in Model)
     {
-        <a href="@Url.Action("Details","guides", new {id = item.ID })"
-           class="Guides">
+        <a href="@Url.Action("Details","guides", new {id = item.ID })" class="Guide">
+
             <h2 class="guidetitle">@item.Title</h2>
             <img src="@Url.Content("~/Content/Img" + item.ImageFile)" alt="finbild"
                  class="img-responsive" />
