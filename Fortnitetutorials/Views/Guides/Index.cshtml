@@ -5,11 +5,6 @@
 }
 
 
-    <p>
-        <span class="btn btn-default"> @Html.ActionLink("Create New", "Create")</span>
-    </p>
-
-
 <div class="Guides">
     @foreach (var item in Model)
     {
@@ -22,3 +17,9 @@
         </a>
     }
 </div>
+
+@if (Request.IsAuthenticated && User.IsInRole("Admin")) {
+<p>
+    <span class="btn btn-default"> @Html.ActionLink("Create New", "Create")</span>
+</p>
+}
