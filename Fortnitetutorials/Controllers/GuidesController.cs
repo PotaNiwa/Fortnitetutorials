@@ -21,7 +21,7 @@ namespace Fortnitetutorials.Controllers
             var guide = db.Guide.Include(g => g.Category);
             if (!string.IsNullOrEmpty(search))
             {
-                Guides = Guide.Where(p => p.Name.Contains(search));
+                guide = guide.Where(p => p.Title.Contains(search));
             }
             return View(guide.ToList());
         }
