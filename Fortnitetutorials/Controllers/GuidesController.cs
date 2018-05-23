@@ -17,8 +17,12 @@ namespace Fortnitetutorials.Controllers
 
         // GET: Guides
         public ActionResult Index(string search)
-        {
+        { 
             var guide = db.Guide.Include(g => g.Category);
+            if (!string.IsNullOrEmpty(search))
+            {
+                Guides = Guide.Where(p => p.Name.Contains(search));
+            }
             return View(guide.ToList());
         }
 
