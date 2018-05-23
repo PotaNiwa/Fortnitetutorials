@@ -191,7 +191,7 @@ footer {
 }
 
 .Guides {
-    margin-left: 90px; 
+    margin-left: 12%; 
     max-width: 250px;
     grid-row: span 1/2;
     grid-column: span 1;
@@ -277,4 +277,8 @@ h1 {
 
 .topstuffdesc{
     margin-left: 10%;
+}
+
+.contacth1{
+    color: white;
 }
