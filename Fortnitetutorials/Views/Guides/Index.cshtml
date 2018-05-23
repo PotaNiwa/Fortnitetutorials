@@ -4,18 +4,23 @@
     ViewBag.Title = "Guides";
 }
 
+@using (Html.BeginForm("index", "Guides", FormMethod.Get))
+{
+    <input type="text" id="search" name="search" placeholder="Search guides... "/>
+    <input type="submit" value="search"/>
+}
 
 <div class="Guides">
     @foreach (var item in Model)
     {
-        <a href="@Url.Action("Details","guides", new {id = item.ID })" class="Guide">
+        <a href="@Url.Action("Details", "guides", new { id = item.ID })" class="Guide">
 
             <h2 class="guidetitle">@item.Title</h2>
             <img src="@Url.Content("~/Content/Img" + item.ImageFile)" alt="finbild"
                  class="img-responsive" />
             
         </a>
-    }
+        }
 </div>
 
 @if (Request.IsAuthenticated && User.IsInRole("Admin")) {

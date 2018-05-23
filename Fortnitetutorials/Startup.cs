@@ -24,8 +24,8 @@ namespace Fortnitetutorials
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            CreateAdmin();
             CreateRoles();
+            CreateAdmin();
         }
 
         private void CreateRoles()

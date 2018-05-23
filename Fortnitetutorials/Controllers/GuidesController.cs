@@ -16,7 +16,7 @@ namespace Fortnitetutorials.Controllers
         private MixupContext db = new MixupContext();
 
         // GET: Guides
-        public ActionResult Index()
+        public ActionResult Index(string search)
         {
             var guide = db.Guide.Include(g => g.Category);
             return View(guide.ToList());
