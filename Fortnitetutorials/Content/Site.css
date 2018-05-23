@@ -261,3 +261,20 @@ h1 {
 .createbtn a:hover{
     text-decoration:none;
 }
+
+.articledesc{
+    max-width: 920px;
+    margin: 0 auto;
+    border: 1px solid #eeeeee;
+    padding: 20px;
+}
+
+.articledesc img{
+    padding: 40px;
+    margin-left: 30%;
+    max-width: 500px;
+}
+
+.topstuffdesc{
+    margin-left: 10%;
+}
